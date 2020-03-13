@@ -27,7 +27,7 @@ module CalendarHelper
 		7 - (Date::DAYNAMES.index(tday.end_of_month.strftime("%A")) + 1)
 	end
 
-	def date_builder
+	def date_container_builder
 		(1..day_count).to_a.append(['x'] * append_count).prepend(['x'] * prepend_count).flatten
 	end
 
