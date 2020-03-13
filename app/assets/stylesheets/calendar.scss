@@ -1,0 +1,65 @@
+// Place all the styles related to the calendar controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.banner {
+	margin-bottom: 2em;
+	padding: .75em .5em .75em 1em;
+	background-color: lighten(#416C6A, 5%);
+	box-shadow: -1px 1px 5px 3px darken(#416C6A, 12%);
+	color: ghostwhite;
+	font-size: 1.1em;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+
+	h2 { margin: 0; }
+}
+
+#calendar-display {
+	margin: 0 auto;
+	width: 95%;
+	background-color: #81CECC; 
+	box-shadow: -3px 5px 8px rgba(0,0,0,0.6);
+
+	> div	{
+		min-width: 45em;
+	}
+
+	.day, .date-container {
+		width: calc(100%/7);
+		min-width: 5em;
+
+		&:not(:last-of-type) {
+			border-right: 2px solid darken(#81CECC, 25%);		
+		}
+	}
+
+	.day { 
+		margin: .1em 0 0;
+		padding: .2em 0 .3em;
+		text-align: center; 
+		border-bottom: 1px solid darken(#81CECC, 25%);
+	}
+
+	.date-container {
+		position: relative;
+		margin: 0;
+		height: 6em;
+		border-top: 1px solid darken(#81CECC, 25%);
+	    box-shadow: inset 0px 0px 5px 1px rgba(58, 149, 147, 0.4);
+
+		&.today {
+			color: ghostwhite;
+			background-color: darken(#81CECC, 45%);
+
+			.date { font-weight: 900; }
+		}
+	}
+
+	.date {
+		position: absolute;
+		top: 5px;
+		left: 7px;
+		font-size: .8em;
+		opacity: .7;
+	}
+}

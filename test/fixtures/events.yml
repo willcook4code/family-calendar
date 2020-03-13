@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start: 2020-03-09 21:53:07
+  end: 2020-03-09 21:53:07
+  day: one
+  member: one
+
+two:
+  start: 2020-03-09 21:53:07
+  end: 2020-03-09 21:53:07
+  day: two
+  member: two

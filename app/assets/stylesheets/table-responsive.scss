@@ -1,0 +1,112 @@
+.table-wrapper {
+  overflow: hidden;
+  position: relative;
+  border-radius: 2px;
+  max-width: 700px;
+  margin: 0 auto;
+
+  .sidebar {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 1.5em;
+    height: 100%;
+
+    &.left {
+      width: 0;
+      background: linear-gradient(to right, rgba(0,0,0,0.5) -100%, transparent);
+    }
+    &.right {
+      right: 0;
+      cursor: e-resize;
+      background: linear-gradient(to left, rgba(0,0,0,0.5) -100%, transparent);
+    }
+  }
+
+  .table-responsive {
+    position: relative;
+    overflow-x: auto;
+    border: 2px solid rgba(0,0,0,0.2);
+
+    .table {
+      width: 100%;
+      font-family: sans-serif;
+      border-spacing: 0;
+    }
+
+    th {
+      &:not(:last-child) {
+        border-right: 1px solid #fff;
+      }
+    }
+
+    td {
+      &:not(:last-child) {
+        border-right: 1px solid #fff;
+      }
+    }
+
+    th {
+      vertical-align: bottom;
+      border-bottom: 2px solid #fff;
+      padding: 0.65em .5em .25em;
+      background: #fff;
+      color: #fff;
+      font-weight: 300;
+      font-size: 1.1em;
+
+      &.middle { vertical-align: middle; }
+    }
+
+    .table tbody {
+      tr {
+        td {
+          padding: 0.8em .6em 0.6em;
+          position: relative;
+          vertical-align: middle;
+          min-width: 250px;
+          max-width: 325px;
+          overflow: hidden;
+
+          &.short {
+            min-width: 75px;
+          }
+          &.align-top {
+            vertical-align: top;
+          }
+        }
+      }
+
+      tr:nth-of-type(odd) {
+        background-color: #fff;
+      }
+
+      tr:nth-of-type(even) {
+        background-color: #fff;
+      }
+
+      tr.sub-header {
+        background-color: #fff;
+        color: #fff;
+
+        td {
+          &:not(:last-child) {
+            border-right: none;
+            border-top: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+          }
+        }
+      }
+    }
+
+    .stripped {
+      padding: 2px 31px 5px 5px;
+      height: 31px;
+      border-radius: 3px;
+      background-color: rgba(255, 255, 255, .8);
+      background-position: calc(100% - 15px) 13px,
+                           calc(100% - 10px) 13px,
+                           calc(100% - 1.7em) 0.3em;
+    }
+  }
+}

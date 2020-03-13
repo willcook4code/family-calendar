@@ -1,0 +1,31 @@
+<% title tday.strftime("%B") + " Events" %>
+
+<header class="banner">
+	<h2><%= "Good #{where_in_day}! Today is #{tday.strftime("%A")}, #{tday.strftime("%B")} #{tday.strftime("%d")}" %></h2>
+</header>
+
+
+<section id="calendar-display">
+	<div class="flex-row">
+		<% day_list.each do |d| %>
+			<h3 class="day"><%= d %></h3>
+		<% end %>
+	</div>
+	
+	<% date_builder.each_slice(7) do |dr| %>
+
+		<div class="flex-row">
+
+			<% dr.each do |da| %>
+				<p class="date-container<%= (da == tday.day) ? ' today' : nil %>">
+					<span class="date">
+						<%= (da != 'x') ? da.to_s : nil %>
+					</span>
+				</p>
+
+			<% end %>
+
+		</div>
+
+	<% end %>
+</section>
